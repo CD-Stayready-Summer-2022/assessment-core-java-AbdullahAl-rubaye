@@ -5,7 +5,11 @@ public class PetOwner {
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
+     private String petOwnerName;
+     private String petName;
     public PetOwner(String name, Pet... pets) {
+        this.petOwnerName=petOwnerName;
+        this.petName=petName;
     }
 
     /**

@@ -1,17 +1,25 @@
 package com.codedifferently.assessment01.part02;
 
 public abstract class Pet implements Animal {
+    private String name;
+    private Integer age;
+    private String petOwner;
+
     /**
      * nullary constructor
      * by default, pet has age of 0; name of "";
      */
-    public Pet() {
+    public Pet(String name, Integer age,String petOwner) {
+        this.name = name;
+        this.age = age;
+        this.petOwner=petOwner;
     }
 
     /**
      * @param name name of this pet
      */
     public Pet(String name) {
+        this.getName();
     }
 
 
@@ -19,6 +27,7 @@ public abstract class Pet implements Animal {
      * @param age age of this pet
      */
     public Pet(int age) {
+        this.getAge();
     }
 
     /**
@@ -26,33 +35,41 @@ public abstract class Pet implements Animal {
      * @param age age of this pet
      */
     public Pet(String name, int age) {
+        this.getName();
+        this.getAge();
+    }
+
+    public Pet() {
+
     }
 
     /**
      * @return name of this pet
      */
     public String getName() {
-        return null;
+        return name;
     }
 
     /**
      * @return age of this pet
      */
     public Integer getAge() {
-        return null;
+        return age;
     }
 
     /**
      * @param newPetOwner the new owner of this pet
-     * ensure this instance of `Pet` is added to the owner's composite `pets` list
+     *                    ensure this instance of `Pet` is added to the owner's composite `pets` list
+     * @return
      */
-    public void setOwner(PetOwner newPetOwner) {
+    public String setOwner(PetOwner newPetOwner) {
+        return this.petOwner=petOwner;
     }
 
     /**
      * @return PetOwner object whose composite `pets` collection contains this Pet instance
      */
     public PetOwner getOwner() {
-        return null;
+        return getOwner();
     }
 }
